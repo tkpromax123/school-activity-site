@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise — 30-Minute Types & Routines</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif; margin: 0;
+      background: url('Backdrop.webp') no-repeat center center fixed;
+      background-size: cover; color: #333; position: relative;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1;
+      background-color: rgba(0, 47, 54, 0.6);
+    }
+
+    nav {
+      background-color: rgba(0,95,115,0.9);
+      padding: 0.8em 2em; display: flex; justify-content: space-between; align-items: center;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    nav.scrolled { box-shadow: 0 3px 12px rgba(0,0,0,0.2); }
+    nav .logo { display: flex; align-items: center; }
+    nav .logo img { height: 40px; border-radius: 5px; }
+    nav .logo span { margin-left: 10px; font-weight: bold; color: #fff; font-size: 1.2em; }
+    nav .nav-links a {
+      color: #fff; text-decoration: none; margin-left: 1.5em; font-weight: bold;
+      padding: 0.4em 0.8em; border-radius: 5px; transition: all 0.3s ease;
+    }
+    nav .nav-links a:hover { background: #94d2bd; color: #00363d; }
+
+    header {
+      background: linear-gradient(to right, rgba(10,147,150,0.95), rgba(0,95,115,0.9));
+      color: #fff; text-align: center; padding: 4em 1em; animation: fadeIn 1.2s ease-out;
+    }
+    @keyframes fadeIn { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+
+    section {
+      max-width: 1000px; margin: 2em auto; padding: 2em;
+      background: rgba(255,255,255,0.92);
+      border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      opacity: 0; transform: translateY(40px); transition: all 0.6s ease-out;
+    }
+    section.show { opacity: 1; transform: translateY(0); }
+    h2 { color: #0a9396; margin-top: 0; }
+    ul { padding-left: 1.2em; }
+
+    .section-img {
+      width: 100%; border-radius: 10px; margin: 1em 0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .section-img:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+
+    details {
+      background: #f7fbfa; border: 1px solid #d7ece9; border-radius: 10px;
+      padding: 1em 1.2em; margin-top: 1em;
+    }
+    details summary {
+      cursor: pointer; font-weight: bold; color: #0a9396; list-style: none;
+    }
+    details[open] { background: #eef7f5; }
+
+    .callout {
+      background: #e6f4f1; border-left: 6px solid #0a9396; padding: 1em 1.2em; border-radius: 8px;
+    }
+
+    footer {
+      text-align: center; padding: 1em; color: #fff; margin-top: 3em;
+      background-color: rgba(0,95,115,0.9);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0.8em 1em; }
+      nav .logo span { font-size: 1em; }
+      section { margin: 1em; padding: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <span>School Physical Activity</span>
+    </div>
+    <div class="nav-links">
+      <a href="website.html">Home</a>
+      <a href="exercise.html">Exercise</a>
+      <a href="bibliography.html">Bibliography</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Exercise Types for 30 Minutes a Day</h1>
+    <p>Pick a type, follow the 30-minute plan, and split it into mini sessions if you like.</p>
+  </header>
+
+  <!-- GUIDELINE RECAP -->
+  <section id="recap">
+    <h2>How to Use These Plans</h2>
+    <img class="section-img" src="morning stretching.webp" alt="Morning stretches">
+      <p><strong>Target:</strong> 30 minutes of moderate activity daily (e.g., 3 × 10 minutes). Choose any plan below; swap exercises you don’t like for ones you enjoy.</p>
+    </div>
+    <ul>
+      <li><strong>Warm-up (3–5 min):</strong> light jog/walk, arm circles, hip rolls.</li>
+      <li><strong>Main set (20–24 min):</strong> the core of the plan.</li>
+      <li><strong>Cool-down (3–5 min):</strong> easy walk + stretches.</li>
+    </ul>
+  </section>
+
+  <!-- CARDIO PLAN -->
+  <section id="cardio">
+    <h2>Cardio (Moderate) — 30-Minute Plan</h2>
+     <img class="section-img" src="kid playing sport.jpg" alt="Students playing sport">
+    <details open>
+      <summary>View routine</summary>
+      <ul>
+        <li><strong>Warm-up:</strong> 5 min brisk walk.</li>
+        <li><strong>Main:</strong> 20 min continuous movement — choose <em>one</em> or mix:
+          <ul>
+            <li>Brisk walk / light jog around the oval.</li>
+            <li>Cycle (stationary or outdoor).</li>
+            <li>Skipping rope (intervals: 1 min on / 30s off).</li>
+            <li>Shadow boxing or dance flow.</li>
+          </ul>
+        </li>
+        <li><strong>Cool-down:</strong> 5 min easy walk + calf/quad stretches.</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- STRENGTH PLAN -->
+  <section id="strength">
+    <h2>Bodyweight Strength — 30-Minute Plan (No Equipment)</h2>
+     <img class="section-img" src="strength training.webp" alt="Strength training">
+    <details open>
+      <summary>View routine</summary>
+      <ul>
+        <li><strong>Warm-up:</strong> 4 min (high knees, arm swings, hip hinges).</li>
+        <li><strong>Main (4 rounds):</strong> 40s work / 20s rest
+          <ul>
+            <li>Squats → Push-ups (wall/knee/standard) → Reverse lunges → Plank</li>
+            <li>Rest 60s between rounds</li>
+          </ul>
+        </li>
+        <li><strong>Cool-down:</strong> 4–5 min stretch (hamstrings, chest, hips).</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- FLEXIBILITY / MOBILITY -->
+  <section id="mobility">
+    <h2>Flexibility & Mobility — 30-Minute Flow</h2>
+     <img class="section-img" src="mobility work.jpg" alt="Mobility work">
+    <details open>
+      <summary>View routine</summary>
+      <ul>
+        <li>5 min gentle walk + shoulder rolls</li>
+        <li>20 min sequence:
+          <ul>
+            <li>World’s Greatest Stretch (each side)</li>
+            <li>Cat–Cow → Thoracic rotations</li>
+            <li>Hip flexor stretch → Glute stretch</li>
+            <li>Hamstring sweep → Calf stretch</li>
+          </ul>
+        </li>
+        <li>5 min breathing + easy walk</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- MIXED CIRCUIT -->
+  <section id="mixed">
+    <h2>Mixed Circuit — 30-Minute Plan</h2>
+     <img class="section-img" src="circuit.webp" alt="Circuit training">
+    <details open>
+      <summary>View routine</summary>
+      <ul>
+        <li><strong>Warm-up:</strong> 5 min brisk walk.</li>
+        <li><strong>AMRAP (20 min):</strong> Repeat as many rounds as possible at a steady pace:
+          <ul>
+            <li>10 Squats</li>
+            <li>8 Push-ups (any level)</li>
+            <li>12 Walking lunges (6/leg)</li>
+            <li>20 Jumping jacks</li>
+            <li>30s Plank</li>
+          </ul>
+        </li>
+        <li><strong>Cool-down:</strong> 5 min easy walk + stretch.</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- AT-SCHOOL MINI SESSIONS -->
+  <section id="mini">
+    <h2>At-School Mini Sessions (3 × 10 Minutes)</h2>
+    <ul>
+       <img class="section-img" src="recess.jpg" alt="Recess movement ideas">
+      <li><strong>Before school (10):</strong> 5 min brisk walk + 5 min mobility.</li>
+      <li><strong>Recess (10):</strong> 5 × (45s fast walk / 45s easy) around a safe loop.</li>
+      <li><strong>Lunch (10):</strong> Quick circuit — 2 rounds: 10 squats, 10 push-ups, 20 jumping jacks, 20s plank.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 School Physical Activity Initiative</p>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const sections = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerBottom) section.classList.add('show');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // Navbar shadow on scroll
+    const navbar = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
